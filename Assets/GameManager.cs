@@ -7,6 +7,14 @@ public class GameManager : MonoBehaviour
     public Transform tileParent;
     public Sprite[] tileSprites; // Mảng chứa tất cả các sprite cho tiles
 
+    public GameObject playerPrefab;
+    public GameObject enemyPrefab;
+    public GameObject tileMapPrefab;
+
+    private GameObject playerInstance;
+    private GameObject enemyInstance;
+    private GameObject tileMapInstance;
+
     private TileScript firstSelectedTile;
     private TileScript secondSelectedTile;
 
@@ -24,6 +32,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        playerInstance = Instantiate(playerPrefab);
+        enemyInstance = Instantiate(enemyPrefab);
+        tileMapInstance = Instantiate(tileMapPrefab);
+
         GenerateTiles();
     }
 

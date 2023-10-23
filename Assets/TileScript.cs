@@ -15,4 +15,12 @@ public class TileScript : MonoBehaviour
         spriteRenderer.sprite = newSprite;
         tileID = id;
     }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Logic khi người chơi nhấp vào một tile
+        }
+    }
 }
